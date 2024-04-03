@@ -40,12 +40,12 @@ successPercentages |> List.iteri (fun i perc -> printfn "%s: %.2f%%" successfulT
 
 
 printfn "Instruction:2 Discriminated Union"
-// Define the Cuisine discriminated union
+
 type Cuisine =
     | Nepali
     | Bangali
 
-// Define the MovieType discriminated union
+
 type MovieType =
     | Regular
     | IMAX
@@ -54,7 +54,7 @@ type MovieType =
     | IMAXWithSnacks
     | DBOXWithSnacks
 
-// Define the Activity discriminated union
+
 type Activity =
     | BoardGame
     | Chill
@@ -62,7 +62,7 @@ type Activity =
     | Restaurant of Cuisine
     | LongDrive of int * float
 
-// Function to calculate the budget based on activity
+
 let calculateBudget (activity : Activity) =
     match activity with
     | BoardGame -> 10.0
@@ -81,7 +81,7 @@ let calculateBudget (activity : Activity) =
         | Bangali -> 80.0
     | LongDrive (kilometers, fuelChargePerKm) -> float kilometers * fuelChargePerKm
 
-// Example usage
+
 let activity1 = BoardGame
 let activity2 = Movie RegularWithSnacks
 let activity3 = Restaurant Nepali
@@ -94,4 +94,10 @@ printfn "Budget for Activity 3: %.2f CAD" (calculateBudget activity3)
 printfn "Budget for Activity 4: %.2f CAD" (calculateBudget activity4)
 printfn "Budget for Activity 5: %.2f CAD" (calculateBudget activity5)
 
+
+let totalBudget =
+    let activities = [activity1; activity2; activity3; activity4; activity5]
+    List.sumBy calculateBudget activities
+
+printfn "Total Budget for all Activities: %.2f CAD" totalBudget
 
