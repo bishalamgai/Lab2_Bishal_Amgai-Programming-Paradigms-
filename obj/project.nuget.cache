@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4TV5TdJI8BgklLa9k7l36AnBA4SlT0CY7g2BMdxGZNdTL0zZe3wxTK7fTMOigPJeS62hFutHY1BFogUf+njwPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Owner\\Documents\\Third Semester\\Programming Paradigms\\Dotnet\\Lab2_Bishal_Amgai\\Lab2_Bishal_Amgai.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\fsharp.core\\8.0.200\\fsharp.core.8.0.200.nupkg.sha512"
+  ],
+  "logs": []
+}
