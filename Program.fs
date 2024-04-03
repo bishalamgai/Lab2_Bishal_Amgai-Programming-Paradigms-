@@ -2,68 +2,41 @@
 printfn "Hello! I'm Bishal Amgai(22083566)"
 
 printfn "Instruction:1 Records"
-// Define the Coach record
+
 type Coach = {
     Name: string
     FormerPlayer: bool
 }
 
-// Define the Stats record
 type Stats = {
     Wins: int
     Losses: int
 }
 
-// Define the Team record
 type Team = {
     Name: string
     Coach: Coach
     Stats: Stats
 }
 
-// Function to create a Coach record
-let createCoach name formerPlayer =
-    { Name = name; FormerPlayer = formerPlayer }
-
-// Function to create a Stats record
-let createStats wins losses =
-    { Wins = wins; Losses = losses }
-
-// Function to create a Team record
-let createTeam name coach wins losses =
-    { Name = name; Coach = coach; Stats = createStats wins losses }
-
-// Create coaches
-let coaches = [
-    createCoach "Gregg Popovich" true
-    createCoach "Erik Spoelstra" false
-    createCoach "Steve Kerr" true
-    createCoach "Tyronn Lue" true
-    createCoach "Doc Rivers" false
-]
-
-// Create teams with stats
 let teams = [
-    createTeam "San Antonio Spurs" (List.item 0 coaches) 1707 1079
-    createTeam "Miami Heat" (List.item 1 coaches) 1451 1339
-    createTeam "Golden State Warriors" (List.item 2 coaches) 2944 2290
-    createTeam "Los Angeles Clippers" (List.item 3 coaches) 1571 1888
-    createTeam "Philadelphia 76ers" (List.item 4 coaches) 2833 2686
+    { Name = "San Antonio Spurs"; Coach = { Name = "Gregg Popovich"; FormerPlayer = true }; Stats = { Wins = 1707; Losses = 1079 } }
+    { Name = "Miami Heat"; Coach = { Name = "Erik Spoelstra"; FormerPlayer = false }; Stats = { Wins = 1451; Losses = 1339 } }
+    { Name = "Golden State Warriors"; Coach = { Name = "Steve Kerr"; FormerPlayer = true }; Stats = { Wins = 2944; Losses = 2290 } }
+    { Name = "Los Angeles Clippers"; Coach = { Name = "Tyronn Lue"; FormerPlayer = true }; Stats = { Wins = 1571; Losses = 1888 } }
+    { Name = "Philadelphia 76ers"; Coach = { Name = "Doc Rivers"; FormerPlayer = false }; Stats = { Wins = 2833; Losses = 2686 } }
 ]
 
-// Filter successful teams
 let successfulTeams = teams |> List.filter (fun team -> team.Stats.Wins > team.Stats.Losses)
 
-// Calculate success percentage of each team
 let successPercentage team =
     float team.Stats.Wins / float (team.Stats.Wins + team.Stats.Losses) * 100.0
 
-// Map success percentage for each team
 let successPercentages = successfulTeams |> List.map successPercentage
 
-// Print success percentages
 printfn "Success percentages:"
 successPercentages |> List.iteri (fun i perc -> printfn "%s: %.2f%%" successfulTeams.[i].Name perc)
+
 
 
 printfn "Instruction:2 Discriminated Union"

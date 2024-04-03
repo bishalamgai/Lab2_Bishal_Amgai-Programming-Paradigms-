@@ -27,3 +27,4 @@ C:\Users\Owner\Documents\Third Semester\Programming Paradigms\Dotnet\Lab2_Bishal
 C:\Users\Owner\Documents\Third Semester\Programming Paradigms\Dotnet\Lab2_Bishal_Amgai\obj\Debug\net8.0\Lab2_Bishal_Amgai.pdb
 C:\Users\Owner\Documents\Third Semester\Programming Paradigms\Dotnet\Lab2_Bishal_Amgai\obj\Debug\net8.0\Lab2_Bishal_Amgai.genruntimeconfig.cache
 C:\Users\Owner\Documents\Third Semester\Programming Paradigms\Dotnet\Lab2_Bishal_Amgai\obj\Debug\net8.0\ref\Lab2_Bishal_Amgai.dll
+C:\Users\Owner\Documents\Third Semester\Programming Paradigms\Dotnet\Lab2_Bishal_Amgai\obj\Debug\net8.0\Lab2_Bishal_Amgai.sourcelink.json
